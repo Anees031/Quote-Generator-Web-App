@@ -9,7 +9,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { quotes } from "@/data/quotes"
 import { motion, AnimatePresence } from "framer-motion"
-import { CheckCircle2, Copy } from "lucide-react"
+import { Copy } from "lucide-react"
 import { toast } from "sonner"
 import { jsPDF } from "jspdf"
 
@@ -108,7 +108,7 @@ export default function QuoteForm() {
       const [data] = await response.json()
       setApiQuote(data.quote)
       setApiAuthor(data.author)
-    } catch (error) {
+    } catch {
       setApiQuote("Error: Unable to fetch quote. Check your network connection.")
       setApiAuthor("")
     } finally {
