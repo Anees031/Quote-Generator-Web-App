@@ -241,7 +241,7 @@ export default function QuoteForm() {
                     </button>
                   </>
                 ) : (
-                  <span className="text-gray-500">Click "Generate Quote" to get started!</span>
+                  <span className="text-gray-500">Click &quot;Generate Quote&quot; to get started!</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-3 mb-4" role="group" aria-label="API quote actions">
@@ -375,7 +375,7 @@ export default function QuoteForm() {
                 ))}
               </AnimatePresence>
               {results.length === 0 && !loading && (
-                <p className="text-sm text-center text-gray-600" role="status">
+                <p className="text-sm text-center text-gray-600">
                   No quotes found. Try a different topic.
                 </p>
               )}
